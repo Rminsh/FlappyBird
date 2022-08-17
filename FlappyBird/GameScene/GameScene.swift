@@ -32,9 +32,11 @@ class GameScene: SKScene {
     private lazy var ground = gameObject(name: "Ground")
     private lazy var bird = gameObject(name: "Bird") as! Bird
     private lazy var score = gameObject(name: "Score")
-    private lazy var pipes = [gameObject(name: "Pipe0") as! Pipe,
-                              gameObject(name: "Pipe1") as! Pipe,
-                              gameObject(name: "Pipe2") as! Pipe]
+    private lazy var pipes = [
+        gameObject(name: "Pipe0") as! Pipe,
+        gameObject(name: "Pipe1") as! Pipe,
+        gameObject(name: "Pipe2") as! Pipe
+    ]
     
     private var gameState: GameState = .ready {
         didSet {
@@ -52,19 +54,6 @@ class GameScene: SKScene {
     
     override func didMove(to view: SKView) {
         readyGame()
-    }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        guard !onCooldown else { return }
-        switch gameState {
-        case .ready:
-            gameState = .playing
-        case .playing:
-            physicsWorld.contactDelegate = self
-            bird.flap()
-        case .gameOver:
-            gameState = .ready
-        }
     }
     
     override func update(_ currentTime: TimeInterval) {
@@ -101,7 +90,43 @@ class GameScene: SKScene {
         bird.changeState(to: gameState)
         score.changeState(to: gameState)
     }
+    
+    private func touchAction() {
+        guard !onCooldown else { return }
+        switch gameState {
+        case .ready:
+            gameState = .playing
+        case .playing:
+            physicsWorld.contactDelegate = self
+            bird.flap()
+        case .gameOver:
+            gameState = .ready
+        }
+    }
 }
+
+#if os(iOS)
+// Touch-based event handling
+extension GameScene {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        touchAction()
+    }
+}
+#elseif os(macOS)
+// Mouse/Keyboard-based event handling
+extension GameScene {
+    override func mouseDown(with event: NSEvent) {
+        touchAction()
+    }
+    
+    override func keyDown(with event: NSEvent) {
+        /// Detect if `Space` is pressed
+        if event.keyCode == 49 {
+            touchAction()
+        }
+    }
+}
+#endif
 
 extension GameScene: PipeDelegate {
     func pipeDidScore() {

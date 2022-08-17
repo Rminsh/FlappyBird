@@ -8,10 +8,8 @@
 import CoreGraphics
 
 enum Constants {
-    
     static let sounds = SoundConstants()
     static let gameplay = GameplayConstants()
-        
 }
 
 struct SoundConstants {
@@ -25,7 +23,7 @@ struct SoundConstants {
 struct GameplayConstants {
     let birdPosition: CGFloat = -160
     let birdUpperLimit: CGFloat = 600
-    let gameSpeed: CGFloat = 4
+    let gameSpeed: CGFloat = 5
     let pipeLimitLeft: CGFloat = -640
     let pipeLimitRight: CGFloat = 2000
     let pipeSafeRange: ClosedRange<CGFloat> = -80...240
