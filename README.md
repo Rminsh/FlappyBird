@@ -1,4 +1,12 @@
-# SpriteKit Flappy Bird
+<p align="center">
+  <img src="FlappyBird/Resources/Assets.xcassets/AppIcon.appiconset/icon_512x512-min.png" height="192">
+  <h1 align="center">Flappy Bird (with SpriteKit)</h1>
+</p>
+
+![SwiftUI](https://img.shields.io/badge/SwiftUI-black?logo=swift)
+![Supported platforms](https://img.shields.io/badge/Platforms-iOS%2015.0+%20|%20macOS%2012.0-white?logo=apple)
+![Xcode version](https://img.shields.io/badge/Xcode%2014+-black?logo=xcode)
+![SpriteKit](https://img.shields.io/badge/SpriteKit-black?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAADqADAAQAAAABAAAADgAAAAC98Dn6AAACd0lEQVQoFV2NS08TYRSG33am09JCWygXMaJiFUk0caNbQI1h4WVhQsJCIyzUn2BigkGiS287bwGMiRe6JDHxFnVhBCUEjBIFJSUt0E7b6bRDO53r8RuiJPgmbzLnzPOcD/gvRORlPcP62Sb6ohOddXb/YZtHkqQQg+6QbTOepVIhW1FUMozbElFoM/13IlHck9D1B+NZkaakLGkpkUrDw1S8fpWMty+dM/fZneiGzBZu1kPs+od5Mqj74xu6PPWJck+GKX20k5b276aVU0eIdPa6Te8Ye9Bx3OxCNetjeL0d4aSJS1YDLoaeo7r5Lri2X/C02aATx/BsdQVxrdy1zjKHZx+8aZmtPMcjM2uiNPEakZMvwAdVBLp9CCgBaPtqoVouqBUVZYt2mZbF83NzSUTCXrOuISxEu/xo2dsITz4AUya43QLgCyLgCaK3ZRtKShEzM9/N5ZU8+EQsATnqh9VlI1wfRE20F/aSCbM0DuI58NuPw9V+Gtl0Ggs/f2NxMgklo4JPFooQZoqcpujY0dGIptZ6VO3sh8DqxLBsJJMJfJv+gaVpEal4hitrLvB5zqV5y8UJbtHdWVnTYRy2sKUtAo9XgFbRmLSM+a9xxKdSkFMK5EJhssqoYSrLjf6nLVwVP+B1c+e3NkTQ2F4LX7MbopRBYj6FTLyA1LIITdMearY6NPLqZmJddORbfSNh+PwXBI6/Vh8Mefw1PNJrGSRXVyHlZEM1KgOGKtwbfT8oO/yG6AyDPWNCqM7u4wXPkMu0mkQ5BUnJpg1LvyJV+0ZjsUHd4ZxsEp3FWM8YF2+0D7gM/VxOzkBSc4/yvoXZWCxmOf//5Q9/5lu+JZPZ4QAAAABJRU5ErkJggg==)
 
 A SpriteKit rewrite of the world-famous Flappy Bird.
 
